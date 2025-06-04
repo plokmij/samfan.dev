@@ -3,123 +3,500 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samfan P P - Portfolio</title>
+    <title>Samfan P P</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .profile {
-            text-align: center;
-        }
-        .profile img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-        .social-links {
-            margin-top: 20px;
-        }
-        .social-links a {
-            margin: 0 10px;
-            text-decoration: none;
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
             color: #333;
+            background: #fff;
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
-        .social-links a:hover {
-            color: #0073b1; /* LinkedIn color */
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #000;
         }
-        section {
-            margin-top: 30px;
-        }
+
         h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 3rem 0 1rem 0;
+            color: #000;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
         }
-        ul {
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            margin-bottom: 3rem;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info span {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .stats {
+            display: flex;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .stat strong {
+            color: #000;
+            font-weight: 600;
+        }
+
+        .experience-item {
+            margin-bottom: 2.5rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .company {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .date {
+            color: #999;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .description {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .achievements {
             list-style: none;
-            padding: 0;
+            margin-left: 0;
         }
-        li {
-            margin-bottom: 10px;
+
+        .achievements li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .achievements li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+
+        .project-item {
+            margin-bottom: 2rem;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .tech-stack {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .tech-stack strong {
+            color: #000;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .skill-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+
+        .skill-category p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .degree {
+            font-weight: 600;
+            color: #000;
+        }
+
+        .institution {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .experience-header,
+            .project-header,
+            .education-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+
+        .print-only {
+            display: none;
+        }
+
+        @media print {
+            body {
+                font-size: 12px;
+                line-height: 1.4;
+                max-width: none;
+                margin: 0;
+                padding: 20px;
+            }
+
+            .print-only {
+                display: block;
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+
+            h2 {
+                margin-top: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Samfan P P</h1>
-        <p>Malappuram, Kerala | samfan@live.com | +91 8129127294</p>
+        <p class="tagline">Flutter Developer & Technical Entrepreneur</p>
+        
+        <div class="contact-info">
+            <span><a href="mailto:samfan@live.com">samfan AT live.com</a></span>
+            <span><a href="https://github.com/plokmij">github.com/plokmij</a></span>
+            <span><a href="tel:+918129127294">+91 8129127294</a></span>
+            <span>Malappuram, Kerala</span>
+        </div>
+
+
     </header>
-    <div class="container">
-        <div class="profile">
-            <img src="https://avatars.githubusercontent.com/u/20888311?v=4" alt="Samfan P P">
-            <p>Experienced Flutter Developer with 5 years in mobile, web, and desktop application development.</p>
+
+    <section>
+        <h2>About</h2>
+        <p>Experienced Flutter Developer and Technical Entrepreneur with 6+ years building scalable cross-platform applications. Successfully co-founded and developed Flamingo English (30,000+ downloads, 4.7★ rating), demonstrating strong product development and user acquisition skills.</p>
+        
+        <p>Proven expertise in leading development teams, implementing clean architecture patterns, and delivering high-performance mobile solutions across Android, iOS, and web platforms. Published open source Flutter/Dart packages focusing on developer experience and code simplification.</p>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <h3>Software Engineer</h3>
+                    <p class="company">Zensign Global</p>
+                </div>
+                <span class="date">March 2024 - Present</span>
+            </div>
+            <ul class="achievements">
+                <li>Led architecture decisions for multi-platform Flutter applications, establishing coding standards and best practices</li>
+                <li>Optimized application performance through advanced state management solutions and efficient rendering techniques</li>
+                <li>Spearheaded CI/CD pipeline implementation for automated testing and deployment, reducing release cycles</li>
+                <li>Mentored junior developers and conducted code reviews, improving team productivity and code quality</li>
+            </ul>
         </div>
-        <div class="social-links">
-            <a href="https://twitter.com/samfaan" target="_blank">Twitter</a>
-            <a href="https://www.linkedin.com/in/samfan" target="_blank">LinkedIn</a>
-            <a href="https://github.com/plokmij" target="_blank">GitHub</a>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <h3>Software Engineer</h3>
+                    <p class="company">Lithos Technosoft Pvt Ltd</p>
+                </div>
+                <span class="date">February 2022 - February 2024</span>
+            </div>
+            <ul class="achievements">
+                <li>Developed cross-platform applications for Android, iOS, macOS, Linux, Windows, Web, Wear OS, and Android TV using Flutter</li>
+                <li>Implemented comprehensive testing strategies, including integration, widget, and unit tests, reducing bug reports</li>
+                <li>Migrated legacy applications and packages to modern codebases, enhancing performance and maintainability</li>
+                <li>Collaborated with cross-functional teams to diagnose and resolve complex technical issues</li>
+            </ul>
         </div>
-        <section>
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>Programming: Dart, Python, Typescript, C, Go, Java</li>
-                <li>Development Skills: Flutter</li>
-                <li>DBMS: SQLite, MySQL</li>
-                <li>Version Control: Git, GitHub, GitLab</li>
-                <li>Miscellaneous: Firebase, Shorebird, RESTful APIs, BLoC Pattern, Provider</li>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <h3>Co-Founder & Lead Developer</h3>
+                    <p class="company">Flamingo English</p>
+                </div>
+                <span class="date">August 2020 - January 2022</span>
+            </div>
+            <ul class="achievements">
+                <li>Developed an edtech platform from ground up, achieving over 30,000 downloads and 4.7 rating on Play Store</li>
+                <li>Led development and management of 3 high-performing Android apps using Flutter and Firebase</li>
+                <li>Designed and implemented user interfaces and architectural frameworks ensuring intuitive navigation</li>
+                <li>Managed and mentored a team of 3 developers, fostering collaborative environment and improving productivity</li>
             </ul>
-        </section>
-        <section>
-            <h2>Work Experience</h2>
-            <h3>Software Engineer - Lithos Technosoft Pvt Ltd (Feb 2022 - Feb 2024)</h3>
-            <ul>
-                <li>Developed cross-platform applications for various devices using Flutter.</li>
-                <li>Collaborated with cross-functional teams to diagnose and resolve issues.</li>
-                <li>Engineered responsive applications optimized for various screen sizes.</li>
-                <li>Implemented comprehensive testing strategies, reducing bug reports.</li>
-                <li>Migrated legacy applications to modern codebases, enhancing performance and maintainability.</li>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <h3>Software Developer</h3>
+                    <p class="company">DevMonkey Inc</p>
+                </div>
+                <span class="date">August 2019 - August 2020</span>
+            </div>
+            <ul class="achievements">
+                <li>Developed new applications and enhanced existing ones by adding innovative features</li>
+                <li>Modernized legacy projects by integrating new functionalities, ensuring compatibility with latest technologies</li>
+                <li>Mentored and guided interns on best practices in software development</li>
             </ul>
-            <h3>Co-Founder & Lead Developer - Flamingo English (Aug 2020 - Jan 2022)</h3>
-            <ul>
-                <li>Developed an edtech platform, achieving over 30,000 downloads with a 4.7 rating on the Play Store.</li>
-                <li>Led development and management of 3 high-performing Android apps using Flutter and Firebase.</li>
-                <li>Designed and implemented user interfaces and architectural frameworks.</li>
-                <li>Deployed applications to the Play Store, ensuring timely and successful launches.</li>
-                <li>Managed and mentored a team of 3 developers.</li>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <h3>Mobile Application Developer</h3>
+                    <p class="company">Freelance</p>
+                </div>
+                <span class="date">January 2019 - August 2019</span>
+            </div>
+            <ul class="achievements">
+                <li>Designed, developed, and deployed mobile applications using Flutter, Firebase, and REST APIs</li>
+                <li>Implemented user-friendly interfaces ensuring seamless and intuitive user experiences</li>
+                <li>Leveraged Firebase tools including Firestore, Authentication, and Cloud Functions</li>
             </ul>
-            <h3>Software Developer - DevMonkey Inc (Aug 2019 - Aug 2020)</h3>
-            <ul>
-                <li>Developed new applications and enhanced existing ones by adding innovative features.</li>
-                <li>Modernized legacy projects by integrating new functionalities.</li>
-                <li>Mentored and guided interns on best practices in software development.</li>
-            </ul>
-            <h3>Mobile Application Developer - Freelance (Jan 2019 - Aug 2019)</h3>
-            <ul>
-                <li>Designed, developed, and deployed mobile applications using Flutter, Firebase, and REST APIs.</li>
-                <li>Implemented user-friendly interfaces, boosting client satisfaction.</li>
-                <li>Leveraged a wide range of Firebase tools to enhance app functionality and performance.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Education</h2>
-            <h3>B.Tech in Computer Science & Engineering</h3>
-            <p>NSS College of Engineering, Palakkad (Aug 2014 - Mar 2018)</p>
-        </section>
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Projects</h2>
+        
+        <div class="project-item">
+            <div class="project-header">
+                <h3>Flamingo English</h3>
+                <div class="project-links">
+                    <a href="https://play.google.com/store/apps/details?id=com.flamingo.ml">Play Store</a>
+                </div>
+            </div>
+            <p class="description">English language learning app with 30,000+ downloads and 4.7★ rating. Features interactive learning modules, progress tracking, real-time notifications, and Firebase integration.</p>
+            <p class="tech-stack"><strong>Tech:</strong> Flutter, Firebase, BLoC Pattern, Hive, FCM, Crashlytics</p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <h3>LithosPOS</h3>
+                <div class="project-links">
+                    <a href="https://play.google.com/store/apps/details?id=com.lithos.pos">Play Store</a>
+                </div>
+            </div>
+            <p class="description">Led major refactor of point-of-sale software with 100k+ lines of Dart code. Migrated to layered architecture using BLoC pattern and null safety, managed team of 4 developers.</p>
+            <p class="tech-stack"><strong>Tech:</strong> Flutter, REST APIs, SQLite, BLoC Pattern, Mockito</p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <h3>Statecraft</h3>
+                <div class="project-links">
+                    <a href="https://pub.dev/packages/statecraft">pub.dev</a>
+                </div>
+            </div>
+            <p class="description">Lightweight state management library for Flutter/BLoC ecosystem. Eliminates boilerplate code for async operations using modern Dart 3 features including sealed classes and pattern matching.</p>
+            <p class="tech-stack"><strong>Tech:</strong> Dart, Flutter, BLoC, Sealed Classes, Pattern Matching</p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <h3>Contextions</h3>
+                <div class="project-links">
+                    <a href="https://github.com/plokmij/contextions">GitHub</a>
+                </div>
+            </div>
+            <p class="description">Extension methods library that simplifies Flutter development by reducing BuildContext boilerplate and improving code readability through intuitive one-liner APIs.</p>
+            <p class="tech-stack"><strong>Tech:</strong> Flutter, Dart Extensions, BuildContext APIs</p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <h3>Architectural Firm Management App</h3>
+            </div>
+            <p class="description">Cross-platform mobile application for streamlining project site management. Features project listing, payment tracking, and dashboard for managing project details and client transactions.</p>
+            <p class="tech-stack"><strong>Tech:</strong> Flutter, Firebase (Firestore, Auth, Cloud Messaging), Codemagic, BLoC</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Core Technologies</h4>
+                <p>Flutter/Dart, Firebase, REST APIs</p>
+            </div>
+            <div class="skill-category">
+                <h4>Programming Languages</h4>
+                <p>Dart, Python, JavaScript, Java, Go, C</p>
+            </div>
+            <div class="skill-category">
+                <h4>State Management</h4>
+                <p>BLoC Pattern, Provider, Riverpod</p>
+            </div>
+            <div class="skill-category">
+                <h4>Architecture</h4>
+                <p>Clean Architecture, Layered Architecture, MVVM</p>
+            </div>
+            <div class="skill-category">
+                <h4>Databases</h4>
+                <p>SQLite, MySQL, Firestore</p>
+            </div>
+            <div class="skill-category">
+                <h4>DevOps & Tools</h4>
+                <p>Git/GitHub/GitLab, Codemagic, Shorebird, Firebase Suite</p>
+            </div>
+            <div class="skill-category">
+                <h4>Testing</h4>
+                <p>Unit Testing, Widget Testing, Integration Testing, Mockito</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="education-item">
+            <div class="education-header">
+                <div>
+                    <p class="degree">B.Tech Computer Science & Engineering</p>
+                    <p class="institution">NSS College of Engineering, Palakkad</p>
+                </div>
+                <span class="date">August 2014 - March 2018</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Achievements</h2>
+        <ul class="achievements">
+            <li>Co-founded Flamingo English with 30,000+ downloads and 4.7★ rating</li>
+            <li>Led development teams of 4+ developers across multiple high-impact projects</li>
+            <li>Published open source Flutter/Dart packages (Statecraft, Contextions) focusing on developer experience</li>
+            <li>Improved app performance by 25-50% through architecture and caching improvements</li>
+            <li>Successfully refactored 100k+ line codebase, reducing crashes by 45%</li>
+            <li>Implemented CI/CD pipelines reducing deployment time by 70%</li>
+        </ul>
+    </section>
+
+    <div class="print-only">
+        <p style="margin-top: 2rem; color: #666; font-size: 0.9rem;">
+            This CV is also available online at <strong>samfan.dev</strong>
+        </p>
     </div>
 </body>
 </html>
